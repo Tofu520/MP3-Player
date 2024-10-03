@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="panel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="351.0" prefWidth="426.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <HBox layoutX="2.0" layoutY="144.0" prefHeight="59.0" prefWidth="590.0" spacing="40.0">
+         <children>
+            <Button fx:id="playButton" mnemonicParsing="false" onAction="#playSong" prefHeight="32.0" prefWidth="79.0" text="Play" />
+            <Button fx:id="previousButton" mnemonicParsing="false" onAction="#previousSong" prefHeight="32.0" prefWidth="79.0" text="Previous" />
+            <Button fx:id="nextButton" mnemonicParsing="false" onAction="#nextSong" prefHeight="32.0" prefWidth="79.0" text="Next" />
+         </children>
+      </HBox>
+      <Label fx:id="songTitle" alignment="CENTER" layoutX="20.0" layoutY="40.0" prefHeight="47.0" prefWidth="392.0">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <Slider fx:id="volumeSlider" layoutX="84.0" layoutY="296.0" max="200.0" prefHeight="32.0" prefWidth="181.0" value="100.0" />
+      <Label fx:id="volume" layoutX="14.0" layoutY="304.0" prefHeight="17.0" prefWidth="69.0" text="Volume" />
+      <MenuButton layoutY="2.0" mnemonicParsing="false" text="Manage Playlists">
+        <items>
+          <MenuItem fx:id="deletePlaylist" mnemonicParsing="false" onAction="#choosePlaylist" text="Choose Playlist" />
+          <MenuItem fx:id="addPlaylist" mnemonicParsing="false" onAction="#addPlaylist" text="Add Playlist" />
+        </items>
+      </MenuButton>
+      <CheckBox fx:id="LoopCheckBox" layoutX="282.0" layoutY="304.0" mnemonicParsing="false" onAction="#repeatSong" text="Loop" />
+      <ProgressBar fx:id="songProgressBar" layoutX="9.0" layoutY="97.0" prefHeight="18.0" prefWidth="409.0" progress="0.0" />
+      <Slider fx:id="progressSlider" layoutX="9.0" layoutY="99.0" prefHeight="14.0" prefWidth="409.0" />
+      <Button fx:id="shuffleButton" layoutY="219.0" mnemonicParsing="false" onAction="#shuffle" prefHeight="34.0" prefWidth="83.0" text="Shuffle" />
+      <Button fx:id="resetButton" layoutX="121.0" layoutY="220.0" mnemonicParsing="false" onAction="#resetSong" prefHeight="32.0" prefWidth="79.0" text="Reset" />
+      <Button fx:id="pauseButton" layoutX="242.0" layoutY="220.0" mnemonicParsing="false" onAction="#pauseSong" prefHeight="32.0" prefWidth="79.0" text="Pause" />
+   </children>
+</AnchorPane>
